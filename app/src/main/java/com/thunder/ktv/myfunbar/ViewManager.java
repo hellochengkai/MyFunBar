@@ -40,7 +40,8 @@ public class ViewManager implements View.OnClickListener {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myFunApplication.getTsSystemApi().sendKeyDownUpSync(4);
+                if(myFunApplication.getTsSystemApi() != null)
+                    myFunApplication.getTsSystemApi().sendKeyDownUpSync(4);
             }
         });
     }

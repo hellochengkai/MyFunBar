@@ -2,7 +2,6 @@ package com.thunder.ktv.myfunbar;
 
 import android.app.Application;
 import android.content.Context;
-import android.util.Log;
 import android.view.WindowManager;
 
 import com.thunder.ktv.tssystemapi.OnConnectListener;
@@ -24,9 +23,7 @@ public class MyFunApplication extends Application {
             @Override
             public void onConnected(TSSystemApi tsSystemApi) {
                 MyFunApplication.this.tsSystemApi = tsSystemApi;
-                viewManager.showFloatBall();
             }
-
             @Override
             public void onDisconnected() {
 //                tsSystemServiceHelper.bindService();
